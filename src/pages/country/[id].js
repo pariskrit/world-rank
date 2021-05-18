@@ -2,9 +2,9 @@ import Layout from "../../components/Layout";
 
 const Country = ({ country }) => {
   return (
-    <Layout title={country.name}>
-      <h1>{country.name.toUpperCase()}</h1>
-      <h1>{country.population}</h1>
+    <Layout title={country?.name}>
+      <h1>{country?.name.toUpperCase()}</h1>
+      <h1>{country?.population}</h1>
     </Layout>
   );
 };
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
