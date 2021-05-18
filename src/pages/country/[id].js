@@ -17,10 +17,10 @@ export async function getStaticPaths() {
   const paths = data
     .slice(0, 5)
     .map((country) => ({ params: { id: country.alpha3Code } }));
-  console.log(paths);
+
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
